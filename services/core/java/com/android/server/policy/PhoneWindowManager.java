@@ -5767,14 +5767,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 isWakeKey = true;
                 break;
             }
-
-            case KeyEvent.KEYCODE_MUTE:
-                result &= ~ACTION_PASS_TO_USER;
-                if (down && event.getRepeatCount() == 0) {
-                    logKeyboardSystemsEvent(event, KeyboardLogEvent.SYSTEM_MUTE);
-                    toggleMicrophoneMuteFromKey();
-                }
-                break;
             case KeyEvent.KEYCODE_MEDIA_PLAY:
             case KeyEvent.KEYCODE_MEDIA_PAUSE:
             case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:
